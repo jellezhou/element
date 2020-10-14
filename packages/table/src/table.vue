@@ -51,6 +51,7 @@
         ref="emptyBlock"
         :style="emptyBlockStyle">
         <span class="el-table__empty-text" >
+          <img src="./noData.svg">
           <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
         </span>
       </div>
