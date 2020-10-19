@@ -50,9 +50,9 @@
         class="el-table__empty-block"
         ref="emptyBlock"
         :style="emptyBlockStyle">
-        <span class="el-table__empty-text" >
-          <img src="./noData.svg">
-          <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
+        <span >
+          <div class="el-table__empty-image"></div>
+          <div class="el-table__empty-text">{{ emptyText || t('el.table.emptyText') }}</div>
         </span>
       </div>
       <div
@@ -214,12 +214,12 @@
 </template>
 
 <script type="text/babel">
-  import ElCheckbox from 'element-ui/packages/checkbox';
+  import ElCheckbox from 'sale-element/packages/checkbox';
   import { debounce, throttle } from 'throttle-debounce';
-  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
-  import Mousewheel from 'element-ui/src/directives/mousewheel';
-  import Locale from 'element-ui/src/mixins/locale';
-  import Migrating from 'element-ui/src/mixins/migrating';
+  import { addResizeListener, removeResizeListener } from 'sale-element/src/utils/resize-event';
+  import Mousewheel from 'sale-element/src/directives/mousewheel';
+  import Locale from 'sale-element/src/mixins/locale';
+  import Migrating from 'sale-element/src/mixins/migrating';
   import { createStore, mapStates } from './store/helper';
   import TableLayout from './table-layout';
   import TableBody from './table-body';
@@ -228,7 +228,6 @@
   import { parseHeight } from './util';
 
   let tableIdSeed = 1;
-
   export default {
     name: 'ElTable',
 

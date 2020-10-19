@@ -33,9 +33,9 @@
 </template>
 
 <script>
-  import { hasClass } from 'element-ui/src/utils/dom';
-  import { isObject } from 'element-ui/src/utils/types';
-  import Migrating from 'element-ui/src/mixins/migrating';
+  import { hasClass } from 'sale-element/src/utils/dom';
+  import { isObject } from 'sale-element/src/utils/types';
+  import Migrating from 'sale-element/src/mixins/migrating';
 
   export default {
     name: 'ElRate',

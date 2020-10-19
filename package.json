@@ -1,12 +1,8 @@
 {
-  "name": "element-ui",
-<<<<<<< HEAD
-  "version": "2.13.2",
-=======
-  "version": "1.0.0",
->>>>>>> main
+  "name": "sale-element",
+  "version": "1.0.4",
   "description": "A Component Library for Vue.js.",
-  "main": "lib/element-ui.common.js",
+  "main": "lib/sale-element.common.js",
   "files": [
     "lib",
     "src",
@@ -21,7 +17,7 @@
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "build:umd": "node build/bin/build-locale.js",
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf test/**/coverage",
-    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo element.eleme.io>>examples/element-ui/CNAME",
+    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo element.eleme.io>>examples/sale-element/CNAME",
     "deploy:extension": "cross-env NODE_ENV=production webpack --config build/webpack.extension.js",
     "dev:extension": "rimraf examples/extension/dist && cross-env NODE_ENV=development webpack --watch --config build/webpack.extension.js",
     "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
@@ -40,7 +36,7 @@
     },
     {
       "domain": "element-theme",
-      "public": "examples/element-ui",
+      "public": "examples/sale-element",
       "build": [
         "yarn",
         "npm run deploy:build"
@@ -129,7 +125,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss": "^7.0.14",
     "progress-bar-webpack-plugin": "^1.11.0",
-    "rimraf": "^2.5.4",
+    "rimraf": "^2.7.1",
     "sass-loader": "^7.1.0",
     "select-version-cli": "^0.0.2",
     "sinon": "^7.2.7",

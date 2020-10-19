@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-10-14 15:11:30
+ * @LastEditTime: 2020-10-14 17:49:18
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \sale-element\build\config.js
+ */
 var path = require('path');
 var fs = require('fs');
 var nodeExternals = require('webpack-node-externals');
@@ -9,21 +17,21 @@ var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'
 var externals = {};
 
 Object.keys(Components).forEach(function(key) {
-  externals[`element-ui/packages/${key}`] = `element-ui/lib/${key}`;
+  externals[`sale-element/packages/${key}`] = `sale-element/lib/${key}`;
 });
 
-externals['element-ui/src/locale'] = 'element-ui/lib/locale';
+externals['sale-element/src/locale'] = 'sale-element/lib/locale';
 utilsList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`element-ui/src/utils/${file}`] = `element-ui/lib/utils/${file}`;
+  externals[`sale-element/src/utils/${file}`] = `sale-element/lib/utils/${file}`;
 });
 mixinsList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`element-ui/src/mixins/${file}`] = `element-ui/lib/mixins/${file}`;
+  externals[`sale-element/src/mixins/${file}`] = `sale-element/lib/mixins/${file}`;
 });
 transitionList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`element-ui/src/transitions/${file}`] = `element-ui/lib/transitions/${file}`;
+  externals[`sale-element/src/transitions/${file}`] = `sale-element/lib/transitions/${file}`;
 });
 
 externals = [Object.assign({
@@ -36,7 +44,7 @@ exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
   examples: path.resolve(__dirname, '../examples'),
-  'element-ui': path.resolve(__dirname, '../')
+  'sale-element': path.resolve(__dirname, '../')
 };
 
 exports.vue = {

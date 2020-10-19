@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './sale-element'
 
-import * as ElementUI from './element-ui'
+import * as ElementUI from './sale-element'
 export default ElementUI

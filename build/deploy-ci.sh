@@ -1,3 +1,11 @@
+###
+ # @Author: your name
+ # @Date: 2020-10-14 15:11:30
+ # @LastEditTime: 2020-10-14 17:50:04
+ # @LastEditors: Please set LastEditors
+ # @Description: In User Settings Edit
+ # @FilePath: \sale-element\build\deploy-ci.sh
+ ###
 #! /bin/sh
 mkdir temp_web
 git config --global user.name "element-bot"
@@ -44,8 +52,8 @@ if [ "$TRAVIS_TAG" ]; then
   mkdir $SUB_FOLDER
   rm -rf *.js *.css *.map static
   rm -rf $SUB_FOLDER/**
-  cp -rf ../../examples/element-ui/** .
-  cp -rf ../../examples/element-ui/** $SUB_FOLDER/
+  cp -rf ../../examples/sale-element/** .
+  cp -rf ../../examples/sale-element/** $SUB_FOLDER/
   git add -A .
   git commit -m "$TRAVIS_COMMIT_MSG"
   git push origin gh-pages
@@ -61,7 +69,7 @@ cd temp_web
 git clone https://$ROT_TOKEN@github.com/ElementUI/dev.git && cd dev
 mkdir $TRAVIS_BRANCH
 rm -rf $TRAVIS_BRANCH/**
-cp -rf ../../examples/element-ui/** $TRAVIS_BRANCH/
+cp -rf ../../examples/sale-element/** $TRAVIS_BRANCH/
 git add -A .
 git commit -m "$TRAVIS_COMMIT_MSG"
 git push origin master
